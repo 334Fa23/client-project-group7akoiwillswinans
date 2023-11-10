@@ -14,11 +14,13 @@ body {
 
 h1, h2 {
     color: #000;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -41,37 +43,58 @@ nav ul li a:hover {
     border-bottom: 2px solid #f0f0f0;
 }
 
-#logo {
-    padding-left: 10px;
-    width: 180px;
-    height: auto;
+#nav {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 2px solid #f0f0f0;
 }
 
+#logo {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#about-pic {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .clear {
     clear: both;
 }
+/* Style the grid container */
+.grid-container {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ grid-gap: 20px;
+ padding: 40px;
+ max-width: 1200px;
+ margin: 0 auto;
+}
 
+/* Style the grid item */
+.grid-item {
+ background-color: #f2f2f2;
+ border-radius: 5px;
+ padding: 20px;
+ text-align: center;
+}
+
+/* Style the grid item image */
+.grid-item img {
+ width: 100%;
+ height: auto;
+}
 main {
     padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-aside {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-}
-
-figure {
-    margin: 0;
-}
-
-figcaption {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
-}
 
 /* Style the footer */
 footer {
@@ -81,88 +104,6 @@ footer {
     border-top: 2px solid #f0f0f0;
 }
 
-/*
-body, header, nav, main, footer, img, h1, ul {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-header {
-    width: 25%;
-    float: left;
-    padding-bottom: 0;
-    background-color: #000;
-}
-
-img {
-    max-width: 20%;
-    display: block;
-    padding-bottom: 10px;
-}
-
-body {
-   margin:0;
-   padding: 0;
-   font-family: 'Roboto', serif;
-}
-
-#logo { 
- float: left;
- display: inline-block;
-}
-
-.clear {
- clear: both;
-}
-
-#nav {
-    background-color: black;
-    color: white;
-    width: 100%;
-}
-
-nav {
-    float: right;
-    width: 70%;
-    margin: 4em 1em 0 0;
-}
-
-nav ul {
-    margin:0;
-    list-style-type:none;
-    text-align: right;
-}
-
-nav li {
-    display:inline-block;
-    border: none;
-}
-
-nav li a {
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    font-size: 30px;
-    padding: 5px 0px 5px 0px;
-    margin:80px;
-}
-
-nav li a:hover {
-    color: #000;
-    background-color: #fff;
-    padding:10px;
-}
-
-main {
-    color: white;
-    font-family: 'DM Sans', sans-serif;
-    background-image: url(blurred-background-pic.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-*/
 .contact-h2 {
     text-align: center;
 }
@@ -210,5 +151,30 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
+/* Style the footer */
+footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #f0f0f0;
+}
 
+/* Add a media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Add another media query for even smaller screens */
+@media screen and (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
 
