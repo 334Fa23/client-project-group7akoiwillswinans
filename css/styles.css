@@ -91,10 +91,10 @@ body {
 }
 
 index,events
-  text-align: center;
+  text-align: left;
 }
 
-.centered {
+.left{
   max-width: 100%;
   height: auto;
   border-radius: 8px;
